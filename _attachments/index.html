@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--
+  vim:ts=2:sw=2:expandtab
+-->
 <html>
   <head>
     <title>bookbucket</title>
@@ -9,7 +12,9 @@
 
     <h1>bookbucket</h1>
 
-    <div id="profile"></div>
+    <div id="rightColumn">
+	    <div id="profile"></div>
+    </div>
     <div id="books"></div>
     <div id="entry">
       <form>
@@ -54,7 +59,6 @@
       $("#account").evently("account", app);
       $("#profile").evently("profile", app);
       $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
-      $("#items").evently("items", app);
 
       // TODO: write evently events for search/edit form
       var isbn = $get('isbn');
